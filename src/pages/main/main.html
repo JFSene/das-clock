@@ -5,12 +5,12 @@
         </ion-label>
     </div>
     <div>
-        <ul>
+        <ul id="timeList">
             <li>
                 <div id="checkIn">
                     Entrada 1
                 </div>
-                <div>
+                <div id="checkInDone">
                     {{ checkinOne }}
                 </div>
             </li>
@@ -18,7 +18,7 @@
                 <div id="checkOut">
                     Saída 1
                 </div>
-                <div>
+                <div id="checkOutDone">
                     {{ checkoutOne }}
                 </div>
             </li>
@@ -26,7 +26,7 @@
                 <div id="checkIn">
                     Entrada 2
                 </div>
-                <div>
+                <div id="checkInDone">
                     {{ checkinTwo }}
                 </div>
             </li>
@@ -34,11 +34,22 @@
                 <div id="checkOut">
                     Saída 2
                 </div>
-                <div>
+                <div id="checkOutDone">
                     {{ checkoutTwo }}
                 </div>
             </li>
         </ul>
     </div>
-    <button (click)="showEntryTime()">Registrar</button>
+
+   <button icon-start ion-button outline class="button button-md button-outline button-outline-md" (click)="showEntryTime()">
+    <span class="button-inner">
+        <ion-icon name="finger-print" role="img" class="icon icon-md ion-md-finger-print" aria-label="finger-print">
+            ::before
+        </ion-icon>
+        Registrar
+        <div class="button-effect" style="transform: translate3d(-3px, -52px, 0px) scale(1); height: 144px; width: 144px; opacity: 0; transition: transform 313ms ease 0s, opacity 219ms ease 94ms;"></div>
+    </span>
+
+   </button>
+    
 </ion-content>

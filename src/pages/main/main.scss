@@ -10,9 +10,47 @@
 }
 
 #checkIn {
-    
+    background-color: rgb(140, 84, 196);
+    color: snow;
+    font-size: 25px;
+    font-weight: 600;
+    padding: 5px 0px 10px 5px;
+}
+
+#checkInDone {
+    background-color: rgb(145, 88, 199);
+    color: snow;
+    font-size: 18px;
+    padding: 5px 0px 10px 5px;
 }
 
 #checkOut {
+    background-color: rgb(75, 30, 119);
+    color: snow;
+    font-size: 25px;
+    font-weight: 600;
+    padding: 5px 0px 10px 5px;
+}
 
+#checkOutDone {
+    background-color: rgb(69, 27, 110);
+    color: snow;
+    font-size: 18px;
+    padding: 5px 0px 10px 5px;
+}
+
+#timeList {
+    list-style-type: none;
+    padding: 0px;
+}
+
+#registerButton {
+    position: relative;
+    margin-top: 30px;
+    bottom: 20px;
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    z-index: 5;
+    background-color: rebeccapurple;
 }

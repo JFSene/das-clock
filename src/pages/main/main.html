@@ -1,0 +1,44 @@
+<ion-content padding>
+    <div id="clock">
+        <ion-label>
+            {{ formattedDate }}
+        </ion-label>
+    </div>
+    <div>
+        <ul>
+            <li>
+                <div id="checkIn">
+                    Entrada 1
+                </div>
+                <div>
+                    {{ checkinOne }}
+                </div>
+            </li>
+            <li>
+                <div id="checkOut">
+                    Saída 1
+                </div>
+                <div>
+                    {{ checkoutOne }}
+                </div>
+            </li>
+            <li>
+                <div id="checkIn">
+                    Entrada 2
+                </div>
+                <div>
+                    {{ checkinTwo }}
+                </div>
+            </li>
+            <li>
+                <div id="checkOut">
+                    Saída 2
+                </div>
+                <div>
+                    {{ checkoutTwo }}
+                </div>
+            </li>
+        </ul>
+    </div>
+    <button (click)="showEntryTime()">Registrar</button>
+</ion-content>

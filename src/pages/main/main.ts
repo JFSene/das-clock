@@ -44,6 +44,7 @@ export class MainPage {
     this.formattedDate = `${hours}:${minutes}:${seconds}`;
   }
 
+
   showEntryTime() {
     console.log(this.formattedDate);
     if (this.checkinOne === undefined)

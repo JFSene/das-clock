@@ -1,55 +1,35 @@
-<ion-content padding>
-    <div id="clock">
-        <ion-label>
-            {{ formattedDate }}
-        </ion-label>
-    </div>
-    <div>
-        <ul id="timeList">
-            <li>
-                <div id="checkIn">
-                    Entrada 1
-                </div>
-                <div id="checkInDone">
-                    {{ checkinOne }}
-                </div>
-            </li>
-            <li>
-                <div id="checkOut">
-                    Saída 1
-                </div>
-                <div id="checkOutDone">
-                    {{ checkoutOne }}
-                </div>
-            </li>
-            <li>
-                <div id="checkIn">
-                    Entrada 2
-                </div>
-                <div id="checkInDone">
-                    {{ checkinTwo }}
-                </div>
-            </li>
-            <li>
-                <div id="checkOut">
-                    Saída 2
-                </div>
-                <div id="checkOutDone">
-                    {{ checkoutTwo }}
-                </div>
-            </li>
-        </ul>
-    </div>
+<ion-header no-border>
+  <ion-navbar transparent color="calm">
+    <ion-title class="home-title">Home</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="container">
+  <ion-card>
+    <ion-card-header>
+      Registrar Ponto
+    </ion-card-header>
+    <ion-card-content>
+      {{ formattedDate }}
+    </ion-card-content>
+  </ion-card>
+  <ion-list>
+    <ion-item>
+      <ion-label>Entrada 1:</ion-label>
+      <ion-label>{{ checkinOne }}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Saida 1:</ion-label>
+      <ion-label>{{ checkoutOne }}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Entrada 2:</ion-label>
+      <ion-label>{{ checkinTwo }}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Saida 2:</ion-label>
+      <ion-label>{{ checkoutTwo }}</ion-label>
+    </ion-item>
+  </ion-list>
+  <button ion-button block (click)="showEntryTime()">REGISTRAR</button>
 
-   <button icon-start ion-button outline class="button button-md button-outline button-outline-md" (click)="showEntryTime()">
-    <span class="button-inner">
-        <ion-icon name="finger-print" role="img" class="icon icon-md ion-md-finger-print" aria-label="finger-print">
-            ::before
-        </ion-icon>
-        Registrar
-        <div class="button-effect" style="transform: translate3d(-3px, -52px, 0px) scale(1); height: 144px; width: 144px; opacity: 0; transition: transform 313ms ease 0s, opacity 219ms ease 94ms;"></div>
-    </span>
-
-   </button>
-    
 </ion-content>

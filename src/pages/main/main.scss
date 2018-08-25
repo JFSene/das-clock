@@ -1,56 +1,97 @@
+$entry-color: snow;
+$out-color: black;
+$border-style: $entry-color solid 2px;
+@mixin border-setup($radius) {
+  border: $border-style;
+  border-radius: $radius;
+}
+
+@mixin font-setup($align, $size, $color, $weight) {
+  text-align: $align;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin top-border-setup($radius) {
+  border-left: $border-style;
+  border-right: $border-style;
+  border-top: $border-style;
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+  color: $entry-color;
+}
+
+@mixin bottom-border-setup($radius) {
+  border-left: $border-style;
+  border-right: $border-style;
+  border-bottom: $border-style;
+  border-bottom-left-radius: $radius;
+  border-bottom-right-radius: $radius;
+  color: $entry-color;
+}
+
+@mixin top-div-setup($radius) {
+  background: $entry-color;
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+  color: $out-color;
+}
+
+@mixin bottom-div-setup($radius) {
+  background: $entry-color;
+  border-bottom-left-radius: $radius;
+  border-bottom-right-radius: $radius;
+  color: $out-color;
+}
+
+.container {
+  background: #F0C27B;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #4B1248, #F0C27B);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #4B1248, #F0C27B);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.home-title {
+  @include font-setup(center, 22px, $entry-color, 600);
+}
+
 #clock {
-    background-color: rebeccapurple;
-    text-align: center;
-    font-size: 5em;
-    color: lightgray;
-    padding: 3px;
-    margin: 0 auto;
-    width: 100%;
-    height: 20%;
+  @include border-setup(10px);
+  @include font-setup(center, 24px, $entry-color, 600);
+  margin: 0 auto;
+  width: 100%;
+  height: 15%;
+  margin-bottom: 50%;
+}
+
+#time-div {
+  margin-bottom: 50%;
 }
 
 #checkIn {
-    background-color: rgb(140, 84, 196);
-    color: snow;
-    font-size: 25px;
-    font-weight: 600;
-    padding: 5px 0px 10px 5px;
+  @include top-border-setup(5px);
+  @include font-setup(center, 16px, $entry-color, 500);
 }
 
 #checkInDone {
-    background-color: rgb(145, 88, 199);
-    color: snow;
-    font-size: 18px;
-    padding: 5px 0px 10px 5px;
+  @include bottom-border-setup(5px);
+  @include font-setup(center, 16px, $entry-color, 500);
 }
 
 #checkOut {
-    background-color: rgb(75, 30, 119);
-    color: snow;
-    font-size: 25px;
-    font-weight: 600;
-    padding: 5px 0px 10px 5px;
+  @include top-div-setup(5px);
+  @include font-setup(center, 16px, $out-color, 500);
 }
 
 #checkOutDone {
-    background-color: rgb(69, 27, 110);
-    color: snow;
-    font-size: 18px;
-    padding: 5px 0px 10px 5px;
+  @include bottom-div-setup(5px);
+  @include font-setup(center, 16px, $out-color, 500);
 }
 
-#timeList {
-    list-style-type: none;
-    padding: 0px;
+#register {
+  @include font-setup(center, 10px, $entry-color, 600);
 }
 
-#registerButton {
-    position: relative;
-    margin-top: 30px;
-    bottom: 20px;
-    width: 100%;
-    height: 50px;
-    cursor: pointer;
-    z-index: 5;
-    background-color: rebeccapurple;
-}
+
